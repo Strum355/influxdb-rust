@@ -3,7 +3,6 @@ extern crate influxdb;
 use futures::prelude::*;
 use influxdb::{Client, Error, Query, Timestamp};
 use std::panic::{AssertUnwindSafe, UnwindSafe};
-use tokio;
 
 fn assert_result_err<A: std::fmt::Debug, B: std::fmt::Debug>(result: &Result<A, B>) {
     result.as_ref().expect_err("assert_result_err failed");
